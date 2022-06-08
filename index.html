@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tictactoe</title>
+    <link rel="stylesheet" href="css/tictactoe.css">
+</head>
+<body>
+    <div id="welcome">
+        <h1>Welcome To TicTacToe</h1>
+       <p id="player">Player1: <input type="text" id="user1"></p><br>
+       <p id="player">Player2: <input type="text" id="user2"></p><br>
+        <input  id="start" type="button" value="start" onclick="start()">
+    </div>
+    <div id="gamediv">
+        <h1 id="gmnm">TIC TAC TOE</h1>
+        <p id="turn"></p>
+    <div class="container">
+        <div id="0" class="box" onclick="setVal('0')"></div>
+        <div id="1" class="box" onclick="setVal('1')"></div>
+        <div id="2" class="box" onclick="setVal('2')"></div>
+        <div id="3" class="box" onclick="setVal('3')"></div>
+        <div id="4" class="box" onclick="setVal('4')"></div>
+        <div id="5" class="box" onclick="setVal('5')"></div>
+        <div id="6" class="box" onclick="setVal('6')"></div>
+        <div id="7" class="box" onclick="setVal('7')"></div>
+        <div id="8" class="box" onclick="setVal('8')"></div>
+    </div>
+    <input id="reset" type="button" value="Reset" onclick="reset()">
+    <input id="restart" type="button" value="Restart" onclick="restart()">
+    <div id="winstate">
+        <table id="table" style="border: 1px solid rgb(240, 178, 122);">
+            <caption>Winner status</caption>
+            <tr>
+                <td id="name1"></td>
+                <td id="name2"></td>
+            </tr>
+            <tr>
+                <td id="count1">0</td>
+                <td id="count2">0</td>
+            </tr>
+        </table>
+        <h1 id="winner"></h1>
+    </div>
+    </div>
+    <script src="js/tictactoe.js"></script>
+</body>
+</html>

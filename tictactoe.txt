@@ -1,0 +1,34 @@
+var state=true;
+var arr1=[1,0,1,0,1,0,0,1,0]
+function setVal(p){
+    console.log(state);
+    if(state){
+    document.getElementById(p).innerHTML=setIndex(p,"X");
+    }
+    else{
+    document.getElementById(p).innerHTML=setIndex(p,"O");
+    }
+    console.log(arr1);
+}
+function setIndex(index,val){
+   if(arr1[index]==1||arr1[index]==0){
+       arr1[index]=val;
+       state=!state; 
+       getWinner();
+   }
+   else{
+       alert("not allowed");
+   }
+   return arr1[index];
+}
+function getWinner(){
+    if(arr1[0]==arr1[1]&&arr1[1]==arr1[2]||arr1[3]==arr1[4]&&arr1[4]==arr1[5]||arr1[6]==arr1[7]&&arr1[7]==arr1[8]){
+        alert('winner');
+    }
+    else if(arr1[0]==arr1[3]&&arr1[3]==arr1[6]||arr1[1]==arr1[4]&&arr1[4]==arr1[7]||arr1[2]==arr1[5]&&arr1[5]==arr1[8]){
+        alert('winner');
+    }
+    else if(arr1[2]==arr1[4]&&arr1[4]==arr1[6]||arr1[0]==arr1[4]&&arr1[4]==arr1[8]){
+        alert('winner');
+    }
+}
