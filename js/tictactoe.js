@@ -116,8 +116,13 @@ function reset(){
      arr1=[1,0,1,0,1,0,0,1,0];
      for(let i=0;i<=8;i++){
          document.getElementById(i).innerHTML="";
+         document.getElementById(i).style.backgroundColor="#5faee3";
+         
      }
      document.getElementById("turn").innerHTML=("");
+    //  document.querySelectorAll(".box").style.backgroundColor="#5faee3";
+    //  document.querySelectorAll(".box").style.backgroundColor="#5faee3";
+    //  document.querySelectorAll(".box").style.backgroundColor="#5faee3";
  }
  function resetArray(){
     arr1=[null,null,null,null,null,null,null,null,null];
